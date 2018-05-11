@@ -1,0 +1,26 @@
+awk文本过滤的基本用法
+格式：awk [选项] '[条件]{指令}' 文件
+print ;分隔多条指令
+-F: 显示以分号相隔的
+
+登陆日志：  /var/log/secure
+cpu:uptime
+
+NR:行数
+column -t 对齐命令
+
+awk -F: 'BEGIN{print "用户名 UID 家目录"} {print $1,$3,$6} END{print "总用户量:",NR} ' /etc/passwd  | column -t
+
+awk 
+1.使用正则设置条件
+/正则/  在一整行中匹配
+$n~/正则/  $1~/root/  $2~/xx/ $3~.0/
+
+2.字符和数字的比较== ！=/，> >= < <=
+
+sort -n （从小到大排序）
+
+
+
+
+
